@@ -3,6 +3,9 @@ FROM elasticsearch:8.15.0
 # Copy in our custom config file that disables the use of nmap
 COPY elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
 
+# Copy in our custom role file that add an anonymous role
+COPY roles.yml /usr/share/elasticsearch/config/roles.yml
+
 # Copy in the new entrypoint and set the execution bit
 COPY --chmod=755 entrypoint-new.sh /usr/local/bin/entrypoint-new.sh
 

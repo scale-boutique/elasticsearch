@@ -1,6 +1,6 @@
 ## Elasticsearch
 
-This is a repo achieves two things -
+This is a repo achieves three things -
 
 - A preconfigured elasticsearch.yml
 
@@ -13,3 +13,5 @@ This is a repo achieves two things -
     The volumes are mounted as root but elasticsearch is ran as non-root.
 
     This is needed because elasticsearch needs to write to the volume.
+
+- Add an anonymous user that is able to perform a healthcheck to make sure the service is running
