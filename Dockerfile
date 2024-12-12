@@ -1,4 +1,8 @@
-FROM elasticsearch:8.15.0
+# Default Elasticsearch version to use
+ARG ELASTICSEARCH_VERSION=8.15.0
+
+# Use the Elasticsearch image with the specified version
+FROM elasticsearch:${ELASTICSEARCH_VERSION}
 
 # Copy in our custom config file that disables the use of nmap
 COPY elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
